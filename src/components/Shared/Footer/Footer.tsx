@@ -11,7 +11,11 @@ export const Footer: React.FC<FooterProps> = ({ ignoreCard = false }) => {
   return (
     <Box bg="#1D1C1E" mt="19rem" pb="3rem" textAlign="center">
       <Wrapper>
-        {!ignoreCard ? <FooterCard /> : <Box pt="6rem"></Box>}
+        {!ignoreCard ? (
+          <FooterCard />
+        ) : (
+          <Box pt={{ base: "6rem", sm: "12rem" }}></Box>
+        )}
         <FooterInfo />
       </Wrapper>
     </Box>

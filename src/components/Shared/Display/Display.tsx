@@ -11,7 +11,12 @@ export const Display: React.FC<DisplayProps> = ({ info }) => {
   };
 
   return (
-    <Grid templateColumns="330px" justifyContent="center" gap="5rem" mt="8rem">
+    <Grid
+      templateColumns={{ base: "330px", sm: "100%" }}
+      justifyContent="center"
+      gap="5rem"
+      mt="8rem"
+    >
       {renderDisplayCards()}
     </Grid>
   );

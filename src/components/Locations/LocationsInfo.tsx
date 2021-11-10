@@ -1,6 +1,9 @@
 export const info = [
   {
-    img: "./locations/tablet/image-map-canada.png",
+    img: {
+      base: "./locations/tablet/image-map-canada.png",
+      md: "./locations/desktop/image-map-canada.png",
+    },
     heading: "Canada",
     descriptions: [
       [
@@ -12,7 +15,10 @@ export const info = [
     ],
   },
   {
-    img: "./locations/tablet/image-map-australia.png",
+    img: {
+      base: "./locations/tablet/image-map-australia.png",
+      md: "./locations/desktop/image-map-australia.png",
+    },
     heading: "Australia",
     descriptions: [
       ["Designo AU Office", "19 Balonne Street", "New South Wales 2443"],
@@ -20,7 +26,10 @@ export const info = [
     ],
   },
   {
-    img: "./locations/tablet/image-map-uk.png",
+    img: {
+      base: "./locations/tablet/image-map-united-kingdom.png",
+      md: "./locations/desktop/image-map-united-kingdom.png",
+    },
     heading: "United Kingdom",
     descriptions: [
       ["Designo UK Office", "13 Colorado Way", "Rhyd-y-fro SA8 9GA"],

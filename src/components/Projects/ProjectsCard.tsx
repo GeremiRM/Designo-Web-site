@@ -5,7 +5,11 @@ import React from "react";
 interface ProjectsCardProps {
   cardInfo: {
     link: string;
-    img: string;
+    img: {
+      base: string;
+      sm: string;
+      md: string;
+    };
     heading: string;
   };
 }
@@ -14,7 +18,10 @@ export const ProjectsCard: React.FC<ProjectsCardProps> = ({ cardInfo }) => {
   return (
     <Link href={cardInfo.link}>
       <Box
-        bg={`url(${cardInfo.img}) no-repeat center`}
+        bg={{
+          base: `url(${cardInfo.img.base}) no-repeat center`,
+          sm: `url(${cardInfo.img.sm}) no-repeat center/cover`,
+        }}
         borderRadius="20px"
         color="white"
         display="flex"
@@ -41,7 +48,7 @@ export const ProjectsCard: React.FC<ProjectsCardProps> = ({ cardInfo }) => {
             fontFamily="Jost"
             fontWeight="500"
             letterSpacing="1px"
-            fontSize="1.75rem"
+            fontSize={{ base: "1.75rem", sm: "2.5rem" }}
           >
             {cardInfo.heading}
           </Heading>

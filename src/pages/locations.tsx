@@ -11,7 +11,12 @@ const locations: React.FC<{}> = ({}) => {
 
   return (
     <Layout>
-      <Stack textAlign="center" spacing="2rem">
+      <Stack
+        textAlign={{ base: "center", md: "left" }}
+        spacing="2rem"
+        w={{ base: "100%", sm: "680px" }}
+        mx="auto"
+      >
         {renderLocationsCards()}
       </Stack>
     </Layout>

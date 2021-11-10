@@ -1,9 +1,8 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
-import { Wrapper } from "../General/Wrapper";
 
 interface AboutCardProps {
   cardInfo: {
-    img: string;
+    img: { base: string; sm: string; md: string };
     heading: string;
     descriptions: string[];
   };
@@ -15,12 +14,26 @@ export const AboutCard: React.FC<AboutCardProps> = ({ cardInfo }) => {
   };
 
   return (
-    <Box>
-      <Box h="320px" bg={`${cardInfo.img} no-repeat center/cover`}></Box>
-      <Box py="5rem" bg="rgb(253, 243, 240)" fontSize="0.9rem">
-        <Stack spacing="3.75rem" px="2.75rem" lineHeight="1.5rem">
+    <Box borderRadius={{ base: "", sm: "20px" }} overflow="hidden">
+      <Box
+        h="320px"
+        bg={{
+          base: `${cardInfo.img.base} no-repeat center/cover`,
+          sm: `${cardInfo.img.sm} no-repeat center/cover`,
+        }}
+      ></Box>
+      <Box
+        py={{ base: "5rem", sm: "4rem" }}
+        bg="rgb(253, 243, 240)"
+        fontSize={{ base: "0.9rem", sm: "1rem" }}
+      >
+        <Stack
+          spacing={{ base: "3.75rem", sm: "2rem" }}
+          px={{ base: "2.75rem", sm: "4rem" }}
+          lineHeight="1.5rem"
+        >
           <Heading
-            fontSize="1.75rem"
+            fontSize={{ base: "1.75rem", sm: "2.5rem" }}
             fontFamily="Jost"
             color="#E7816B"
             fontWeight="500"

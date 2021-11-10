@@ -8,7 +8,7 @@ import { Projects } from "../components/Projects/Projects";
 export const Index: React.FC<{}> = ({}) => {
   return (
     <Layout>
-      <Box>
+      <Box w={{ sm: "680px" }} mx="auto">
         <Hero />
         <Projects />
         <Features />

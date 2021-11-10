@@ -5,7 +5,7 @@ export const FooterCard: React.FC<{}> = ({}) => {
   return (
     <Box mb="-6rem">
       <Box
-        w="340px"
+        w="100%"
         textAlign="center"
         color="white"
         bg="#E7816B"
@@ -15,7 +15,8 @@ export const FooterCard: React.FC<{}> = ({}) => {
         alignItems="center"
         justifyContent="center"
         flexDir="column"
-        p="4rem 1.75rem"
+        py={{ base: "4rem", sm: "3rem" }}
+        px={{ base: "1.5rem", sm: "8.75rem" }}
         position="relative"
         top="-260px"
       >
@@ -25,13 +26,14 @@ export const FooterCard: React.FC<{}> = ({}) => {
             px="1.5rem"
             mb="1.25rem"
             fontWeight="600"
-            fontSize="2rem"
+            fontSize={{ base: "2rem", sm: "2.5rem" }}
+            lineHeight={{ sm: "2.5rem" }}
           >
             Let’s talk about your project
           </Heading>
         </Box>
         <Box mb="2.5rem">
-          <Text fontSize="15px">
+          <Text fontSize={{ base: "0.9rem", sm: "1rem" }}>
             Ready to take it to the next level? Contact us today and find out
             how our expertise can help your business grow.
           </Text>

@@ -1,6 +1,10 @@
 export const aboutInfo = [
   {
-    img: "url(./about/mobile/image-world-class-talent.jpg)",
+    img: {
+      base: "url(./about/mobile/image-world-class-talent.jpg)",
+      sm: "url(./about/tablet/image-world-class-talent.jpg)",
+      md: "url(./about/desktop/image-world-class-talent.jpg)",
+    },
     heading: "World-class talent",
     descriptions: [
       `
@@ -19,7 +23,11 @@ export const aboutInfo = [
     ],
   },
   {
-    img: "url(./about/mobile/image-real-deal.jpg)",
+    img: {
+      base: "url(./about/mobile/image-real-deal.jpg)",
+      sm: "url(./about/tablet/image-real-deal.jpg)",
+      md: "url(./about/desktop/image-real-deal.jpg)",
+    },
     heading: "The real deal",
     descriptions: [
       `

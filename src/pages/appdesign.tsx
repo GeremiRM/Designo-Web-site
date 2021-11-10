@@ -12,19 +12,27 @@ const AppDesign: React.FC<{}> = ({}) => {
     <Layout>
       <Box>
         <Stack
-          h="320px"
+          h={{ base: "320px", sm: "260px" }}
           bg="rgb(237, 128, 105)"
           color="white"
           align="center"
           justify="center"
           textAlign="center"
           pb="0.5rem"
+          w={{ base: "100%", sm: "680px" }}
+          mx="auto"
+          borderRadius={{ base: "", sm: "20px" }}
+          px={{ base: "", sm: "9rem" }}
         >
           <Wrapper>
-            <Heading fontFamily="Jost" mb="1rem">
+            <Heading
+              fontFamily="Jost"
+              mb={{ base: "1rem", sm: "1rem" }}
+              fontSize={{ base: "2rem", sm: "3rem" }}
+            >
               App Design
             </Heading>
-            <Text fontSize="0.9rem" lineHeight="1.5rem">
+            <Text fontSize={{ base: "0.9rem", sm: "1rem" }} lineHeight="1.5rem">
               Our mobile designs bring intuitive digital solutions to your
               customers right at their fingertips.
             </Text>

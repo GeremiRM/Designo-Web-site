@@ -51,6 +51,7 @@ export const InputField: React.FC<InputFieldProps> = ({
           variant="flushed"
           fontFamily="inherit"
           fontSize="0.9rem"
+          px="0.75rem"
           _placeholder={{
             color: "#ddd",
           }}

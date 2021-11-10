@@ -2,11 +2,11 @@ import { Box } from "@chakra-ui/react";
 
 import Head from "next/head";
 
-import { Header } from "../components/Header/Header";
+import { Header } from "../components/Shared/Header/Header";
 import { Features } from "../components/Home/Features";
 import { Hero } from "../components/Home/Hero";
 import { Projects } from "../components/Home/Projects";
-import { Footer } from "../components/Footer/Footer";
+import { Footer } from "../components/Shared/Footer/Footer";
 
 export const Index: React.FC<{}> = ({}) => {
   return (

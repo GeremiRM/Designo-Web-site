@@ -1,5 +1,5 @@
 import { Box, Heading, Text, Flex, Button, Image } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../General/Wrapper";
 
 interface HeroProps {}
 

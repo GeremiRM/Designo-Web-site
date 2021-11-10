@@ -1,5 +1,5 @@
 import { Box, Grid } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../General/Wrapper";
 import { DesignCard } from "./DesignCard";
 
 interface DesignsProps {

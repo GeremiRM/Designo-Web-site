@@ -1,4 +1,4 @@
-export const webDesignInfo = [
+export default [
   {
     image: "./web-design/desktop/image-express.jpg",
     heading: "Express",

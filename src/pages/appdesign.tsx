@@ -5,9 +5,9 @@ import { Header } from "../components/Header/Header";
 import Head from "next/head";
 import { Designs } from "../components/Designs/Designs";
 
-import info from "../data/webdesign";
+import info from "../data/appdesign";
 
-const WebDesign: React.FC<{}> = ({}) => {
+const AppDesign: React.FC<{}> = ({}) => {
   return (
     <Box>
       <Head>
@@ -31,11 +31,11 @@ const WebDesign: React.FC<{}> = ({}) => {
           pb="0.5rem"
         >
           <Heading fontFamily="Jost" mb="1rem">
-            Web Design
+            App Design
           </Heading>
           <Text fontSize="0.9rem" px="1rem" lineHeight="1.5rem">
-            We build websites that serve as powerful marketing tools and bring
-            memorable brand experiences.
+            Our mobile designs bring intuitive digital solutions to your
+            customers right at their fingertips.
           </Text>
         </Stack>
         <Designs info={info} />
@@ -45,4 +45,4 @@ const WebDesign: React.FC<{}> = ({}) => {
   );
 };
 
-export default WebDesign;
+export default AppDesign;

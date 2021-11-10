@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Wrapper } from "../Wrapper";
+import { Wrapper } from "../../General/Wrapper";
 import { FooterCard } from "./FooterCard";
 import { FooterInfo } from "./FooterInfo";
 

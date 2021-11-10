@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Flex, Button, Image } from "@chakra-ui/react";
+import { ButtonComp } from "../General/ButtonComp";
 import { Wrapper } from "../General/Wrapper";
 
 interface HeroProps {}
@@ -8,7 +9,7 @@ export const Hero: React.FC<HeroProps> = ({}) => {
     <Box bg="rgb(237, 128, 105)" color="white" pt="5rem" overflow="hidden">
       <Flex direction="column" textAlign="center" justify="center">
         <Wrapper>
-          <Box spacing="2rem">
+          <Box spacing="2rem" zIndex="1">
             <Box mb="1rem">
               <Heading fontFamily="Jost" fontSize="2rem">
                 Award-winning custom designs and digital branding solutions
@@ -22,16 +23,9 @@ export const Hero: React.FC<HeroProps> = ({}) => {
               </Text>
             </Box>
             <Box>
-              <Button
-                textTransform="uppercase"
-                bg="white"
-                color="black"
-                fontSize="15px"
-                p="1.75rem"
-                letterSpacing="1px"
-              >
+              <ButtonComp bg="white" color="black">
                 Learn More
-              </Button>
+              </ButtonComp>
             </Box>
           </Box>
         </Wrapper>

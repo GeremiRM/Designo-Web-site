@@ -5,7 +5,7 @@ interface WrapperProps {}
 
 export const Wrapper: React.FC<WrapperProps> = ({ children }) => {
   return (
-    <Box w="90%" mx="auto" maxW={{ base: "340px" }}>
+    <Box w="90%" mx="auto" maxW={{ base: "325px" }}>
       {children}
     </Box>
   );

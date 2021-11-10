@@ -1,24 +1,6 @@
-export const cardsInfo = [
-  {
-    img: "./shared/desktop/illustration-canada.svg",
-    heading: "Canada",
-    button: "See Location",
-  },
-  {
-    img: "./shared/desktop/illustration-australia.svg",
-    heading: "Australia",
-    button: "See Location",
-  },
-  {
-    img: "./shared/desktop/illustration-united-kingdom.svg",
-    heading: "United Kingdom",
-    button: "See Location",
-  },
-];
-
 export const aboutInfo = [
   {
-    img: "url(./about/mobile/image-real-deal.jpg)",
+    img: "url(./about/mobile/image-world-class-talent.jpg)",
     heading: "World-class talent",
     descriptions: [
       `

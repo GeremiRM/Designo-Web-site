@@ -12,15 +12,32 @@ interface DesignCardProps {
 export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
   return (
     <Stack
+      role="group"
       textAlign="center"
-      boxShadow="0 0 20px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.25)"
       border="none"
       borderRadius="8px"
+      bg="rgb(253, 243, 240)"
+      transition="0.1s"
+      _hover={{
+        boxShadow: "0 0 20px rgba(0,0,0,0.25), 0 0 5px rgba(0,0,0,0.25)",
+        transform: "scale(1.01)",
+        bg: "rgb(237, 128, 105)",
+        color: "white",
+        cursor: "pointer",
+      }}
     >
       <Box borderRadius="inherit">
-        <Image src={cardInfo.image} borderRadius="inherit" />
+        <Image
+          src={cardInfo.image}
+          borderRadius="inherit"
+          transition="0.25s"
+          _groupHover={{
+            transform: "scale(1.05)",
+            boxShadow: "0 0 20px rgba(0,0,0,0.25), 0 2px 5px rgba(0,0,0,0.25)",
+          }}
+        />
       </Box>
-      <Box p="3rem 2rem" bg="rgb(253, 243, 240)" borderRadius="inherit">
+      <Box p="3rem 2rem" bg="inherit" borderRadius="inherit">
         <Heading
           textTrasform="uppercase"
           color="#E7816B"
@@ -30,6 +47,9 @@ export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
           letterSpacing="5px"
           textTransform="uppercase"
           mb="1rem"
+          _groupHover={{
+            color: "inherit",
+          }}
         >
           {cardInfo.heading}
         </Heading>

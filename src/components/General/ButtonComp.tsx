@@ -3,6 +3,7 @@ import { Button } from "@chakra-ui/react";
 interface ButtonCompProps {
   bg: string;
   color: string;
+  hoverBg?: string;
 }
 
 export const ButtonComp: React.FC<ButtonCompProps> = ({
@@ -19,6 +20,7 @@ export const ButtonComp: React.FC<ButtonCompProps> = ({
       p="1.75rem"
       letterSpacing="1px"
       borderRadius="8px"
+      _hover={{ bg: "#FFAD9B", color: "white" }}
     >
       {children}
     </Button>

@@ -5,6 +5,7 @@ import { Designs } from "../components/Designs/Designs";
 
 import info from "../data/appdesign";
 import { Projects } from "../components/Projects/Projects";
+import { Wrapper } from "../components/General/Wrapper";
 
 const AppDesign: React.FC<{}> = ({}) => {
   return (
@@ -17,16 +18,17 @@ const AppDesign: React.FC<{}> = ({}) => {
           align="center"
           justify="center"
           textAlign="center"
-          px="3rem"
           pb="0.5rem"
         >
-          <Heading fontFamily="Jost" mb="1rem">
-            App Design
-          </Heading>
-          <Text fontSize="0.9rem" px="1rem" lineHeight="1.5rem">
-            Our mobile designs bring intuitive digital solutions to your
-            customers right at their fingertips.
-          </Text>
+          <Wrapper>
+            <Heading fontFamily="Jost" mb="1rem">
+              App Design
+            </Heading>
+            <Text fontSize="0.9rem" lineHeight="1.5rem">
+              Our mobile designs bring intuitive digital solutions to your
+              customers right at their fingertips.
+            </Text>
+          </Wrapper>
         </Stack>
         <Designs info={info} />
         <Projects ignoreCard={1} />

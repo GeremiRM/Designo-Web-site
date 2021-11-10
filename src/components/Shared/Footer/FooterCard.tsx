@@ -1,4 +1,5 @@
 import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import { ButtonComp } from "../../General/ButtonComp";
 
 export const FooterCard: React.FC<{}> = ({}) => {
   return (
@@ -36,17 +37,9 @@ export const FooterCard: React.FC<{}> = ({}) => {
           </Text>
         </Box>
         <Box>
-          <Button
-            textTransform="uppercase"
-            bg="white"
-            color="black"
-            fontSize="15px"
-            p="1.75rem"
-            letterSpacing="1px"
-            borderRadius="8px"
-          >
+          <ButtonComp bg="white" color="black">
             Get in Touch
-          </Button>
+          </ButtonComp>
         </Box>
       </Box>
     </Box>

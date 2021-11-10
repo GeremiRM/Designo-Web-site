@@ -1,4 +1,5 @@
 import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Wrapper } from "../General/Wrapper";
 
 interface AboutCardProps {
   cardInfo: {

@@ -26,6 +26,8 @@ export const Header: React.FC<{}> = ({}) => {
       align="center"
       w="100%"
       textAlign="left"
+      zIndex="1000"
+      position="relative"
     >
       <Box cursor="pointer">
         <Link href="/">

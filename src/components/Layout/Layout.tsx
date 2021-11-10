@@ -3,7 +3,14 @@ import { Box } from "@chakra-ui/react";
 import { Header } from "../Shared/Header/Header";
 import { Footer } from "../Shared/Footer/Footer";
 
-export const Layout: React.FC<{}> = ({ children }) => {
+interface LayoutProps {
+  ignoreCard?: boolean;
+}
+
+export const Layout: React.FC<LayoutProps> = ({
+  ignoreCard = false,
+  children,
+}) => {
   return (
     <Box fontFamily="Jost" textAlign="center">
       <Head>
@@ -16,7 +23,7 @@ export const Layout: React.FC<{}> = ({ children }) => {
       </Head>
       <Header />
       {children}
-      <Footer />
+      <Footer ignoreCard={ignoreCard} />
     </Box>
   );
 };

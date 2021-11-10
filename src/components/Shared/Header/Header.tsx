@@ -7,6 +7,7 @@ import {
   IconButton,
   UnorderedList,
   ListItem,
+  Fade,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 
@@ -24,6 +25,7 @@ export const Header: React.FC<{}> = ({}) => {
       px="1.5rem"
       align="center"
       w="100%"
+      textAlign="left"
     >
       <Box cursor="pointer">
         <Link href="/">
@@ -36,40 +38,41 @@ export const Header: React.FC<{}> = ({}) => {
           icon={isMenuOpen ? <CloseIcon /> : <HamburgerIcon />}
           onClick={handleClick}
         ></IconButton>
-        <Box
-          display={isMenuOpen ? "block" : "none"}
-          position="absolute"
-          w="100%"
-          bg="black"
-          h="250px"
-          left="0"
-          color="white"
-          top="100px"
-        >
-          <UnorderedList
-            listStyleType="none"
-            fontSize="24px"
-            py="1rem"
-            pl="1.5rem"
-            textTransform="uppercase"
-            fontWeight="400"
-            height="100%"
-            display="flex"
-            justifyContent="space-evenly"
-            flexDirection="column"
-            letterSpacing="1.5px"
+        <Fade in={isMenuOpen}>
+          <Box
+            position="absolute"
+            w="100%"
+            bg="black"
+            h={isMenuOpen ? "250px" : "0px"}
+            left="0"
+            color="white"
+            top="100px"
           >
-            <ListItem>
-              <Link href="/company">Our Company</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/locations">Locations</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/contact">Contact</Link>
-            </ListItem>
-          </UnorderedList>
-        </Box>
+            <UnorderedList
+              display={isMenuOpen ? "flex" : "none"}
+              listStyleType="none"
+              fontSize="24px"
+              py="1rem"
+              pl="1.5rem"
+              textTransform="uppercase"
+              fontWeight="400"
+              height="100%"
+              justifyContent="space-evenly"
+              flexDirection="column"
+              letterSpacing="1.5px"
+            >
+              <ListItem>
+                <Link href="/about">Our Company</Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/locations">Locations</Link>
+              </ListItem>
+              <ListItem>
+                <Link href="/contact">Contact</Link>
+              </ListItem>
+            </UnorderedList>
+          </Box>
+        </Fade>
       </Box>
     </Flex>
   );

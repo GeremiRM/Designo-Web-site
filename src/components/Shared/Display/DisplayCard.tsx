@@ -1,9 +1,15 @@
 import { Box, Image, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
 
 import { ButtonComp } from "../../General/ButtonComp";
 
 interface DisplayCardProps {
-  cardInfo: any;
+  cardInfo: {
+    heading: string;
+    img: string;
+    button?: string;
+    text?: string;
+  };
 }
 
 export const DisplayCard: React.FC<DisplayCardProps> = ({ cardInfo }) => {
@@ -37,9 +43,17 @@ export const DisplayCard: React.FC<DisplayCardProps> = ({ cardInfo }) => {
           {cardInfo.heading}
         </Heading>
         {cardInfo.hasOwnProperty("button") ? (
-          <ButtonComp bg="rgb(237, 128, 105)" color="white">
-            {cardInfo.button}
-          </ButtonComp>
+          <Link
+            href={`/locations#${cardInfo.heading
+              .replace(" ", "-")
+              .toLowerCase()}`}
+          >
+            <Box>
+              <ButtonComp bg="rgb(237, 128, 105)" color="white">
+                {cardInfo.button}
+              </ButtonComp>
+            </Box>
+          </Link>
         ) : (
           <Text>{cardInfo.text}</Text>
         )}

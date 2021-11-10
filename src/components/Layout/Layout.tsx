@@ -1,8 +1,7 @@
-import { Box } from "@chakra-ui/react";
 import Head from "next/head";
-import React from "react";
-import { Footer } from "../Shared/Footer/Footer";
+import { Box } from "@chakra-ui/react";
 import { Header } from "../Shared/Header/Header";
+import { Footer } from "../Shared/Footer/Footer";
 
 export const Layout: React.FC<{}> = ({ children }) => {
   return (

@@ -1,24 +1,14 @@
 import { Box, Stack, Heading, Text } from "@chakra-ui/react";
-import { Footer } from "../components/Footer/Footer";
-import { Header } from "../components/Header/Header";
 
-import Head from "next/head";
+import { Layout } from "../components/Layout/Layout";
 import { Designs } from "../components/Designs/Designs";
 
 import info from "../data/graphicdesign";
+import { Projects } from "../components/Projects/Projects";
 
 const GraphicDesign: React.FC<{}> = ({}) => {
   return (
-    <Box>
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <Header />
+    <Layout>
       <Box>
         <Stack
           h="320px"
@@ -39,9 +29,9 @@ const GraphicDesign: React.FC<{}> = ({}) => {
           </Text>
         </Stack>
         <Designs info={info} />
+        <Projects ignoreCard={2} />
       </Box>
-      <Footer />
-    </Box>
+    </Layout>
   );
 };
 

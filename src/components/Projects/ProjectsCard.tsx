@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import Link from "next/link";
-import React from "react";
 
 interface ProjectsCardProps {
   cardInfo: {
@@ -12,15 +11,23 @@ interface ProjectsCardProps {
     };
     heading: string;
   };
+  ignoredCard: number;
 }
 
-export const ProjectsCard: React.FC<ProjectsCardProps> = ({ cardInfo }) => {
+export const ProjectsCard: React.FC<ProjectsCardProps> = ({
+  cardInfo,
+  ignoredCard,
+}) => {
   return (
     <Link href={cardInfo.link}>
       <Box
+        _first={{
+          gridRow: { md: `${ignoredCard > -1 ? "1/2" : "1/3"}` },
+        }}
         bg={{
           base: `url(${cardInfo.img.base}) no-repeat center`,
           sm: `url(${cardInfo.img.sm}) no-repeat center/cover`,
+          md: `url(${cardInfo.img.md}) no-repeat center/cover`,
         }}
         borderRadius="20px"
         color="white"

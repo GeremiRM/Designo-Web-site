@@ -40,18 +40,22 @@ const projectsInfo = [
 export const Projects: React.FC<ProjectsProps> = ({ ignoreCard = -1 }) => {
   const renderCards = () => {
     return projectsInfo.map((info, idx) =>
-      idx !== ignoreCard ? <ProjectsCard cardInfo={info} /> : ""
+      idx !== ignoreCard ? (
+        <ProjectsCard cardInfo={info} ignoredCard={ignoreCard} />
+      ) : (
+        ""
+      )
     );
   };
 
   return (
     <Wrapper>
       <Grid
-        templateColumns={{ base: "330px", sm: "100%" }}
-        autoRows={{ base: "250px", sm: "200px" }}
+        templateColumns={{ base: "330px", sm: "100%", md: "50% 50%" }}
+        autoRows={{ base: "250px", sm: "200px", md: "300px" }}
         gap="2rem"
         justifyContent="center"
-        py="6rem"
+        py="4rem"
       >
         {renderCards()}
       </Grid>

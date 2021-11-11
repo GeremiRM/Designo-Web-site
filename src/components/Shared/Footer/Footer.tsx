@@ -9,7 +9,12 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ ignoreCard = false }) => {
   return (
-    <Box bg="#1D1C1E" mt="19rem" pb="3rem" textAlign="center">
+    <Box
+      bg="#1D1C1E"
+      mt={{ base: "19rem", md: `${ignoreCard && "10rem"}` }}
+      pb="3rem"
+      textAlign="center"
+    >
       <Wrapper>
         {!ignoreCard ? (
           <FooterCard />

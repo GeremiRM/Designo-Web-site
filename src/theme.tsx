@@ -5,10 +5,10 @@ const fonts = { mono: `'Menlo', monospace` };
 
 const breakpoints = createBreakpoints({
   sm: "48em",
-  md: "60em",
-  lg: "64em",
-  xl: "80em",
-  xxl: "96em",
+  md: "75em",
+  lg: "90em",
+  xl: "105em",
+  xxl: "200em",
 });
 
 const theme = extendTheme({

@@ -1,8 +1,9 @@
 import { Layout } from "../components/Layout/Layout";
-import { Stack } from "@chakra-ui/react";
+import { Stack, Box } from "@chakra-ui/react";
 
 import { info } from "../components/Locations/LocationsInfo";
 import { LocationsCard } from "../components/Locations/LocationsCard";
+import { Wrapper } from "../components/General/Wrapper";
 
 const locations: React.FC<{}> = ({}) => {
   const renderLocationsCards = () => {
@@ -11,14 +12,17 @@ const locations: React.FC<{}> = ({}) => {
 
   return (
     <Layout>
-      <Stack
-        textAlign={{ base: "center", md: "left" }}
-        spacing="2rem"
-        w={{ base: "100%", sm: "680px" }}
-        mx="auto"
-      >
-        {renderLocationsCards()}
-      </Stack>
+      <Box>
+        <Wrapper>
+          <Stack
+            textAlign={{ base: "center", md: "left" }}
+            spacing={{ base: "2rem", sm: "8rem" }}
+            pb="6rem"
+          >
+            {renderLocationsCards()}
+          </Stack>
+        </Wrapper>
+      </Box>
     </Layout>
   );
 };

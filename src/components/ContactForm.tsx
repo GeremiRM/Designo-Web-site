@@ -35,7 +35,7 @@ export const ContactForm: React.FC<{}> = ({}) => {
     >
       {({ isSubmitting }) => (
         <Form>
-          <Stack spacing="1.5rem" pb="1rem">
+          <Stack spacing={{ base: "1.5rem", md: "2rem" }} pb="1rem">
             <InputField name="name" placeholder="Name" label="name" />
 
             <InputField
@@ -72,14 +72,17 @@ export const ContactForm: React.FC<{}> = ({}) => {
               }}
             />
 
-            <Box alignSelf="flex-end" pt={{ base: "4rem", sm: "2rem" }}>
+            <Box
+              alignSelf="flex-end"
+              pt={{ base: "4rem", sm: "2rem", md: "0" }}
+            >
               <Button
                 isLoading={isSubmitting}
                 type="submit"
                 color="black"
                 textTransform="uppercase"
                 fontFamily="inherit"
-                p="2rem 3rem"
+                p="1.7rem 3rem"
                 fontSize="0.9rem"
                 letterSpacing="1px"
               >

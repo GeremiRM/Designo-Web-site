@@ -16,11 +16,16 @@ export const DisplayCard: React.FC<DisplayCardProps> = ({ cardInfo }) => {
   return (
     <Box
       display="flex"
-      flexDirection={{ base: "column", sm: "row" }}
+      flexDirection={{ base: "column", sm: "row", md: "column" }}
       alignItems="center"
       justifyContent="center"
     >
-      <Box position="relative" mb="3rem" w={{ sm: "30%" }} mr={{ sm: "9%" }}>
+      <Box
+        position="relative"
+        mb="3rem"
+        w={{ sm: "30%", md: "60%" }}
+        mr={{ sm: "9%", md: "0" }}
+      >
         <Box
           w="100%"
           h="100%"
@@ -31,7 +36,10 @@ export const DisplayCard: React.FC<DisplayCardProps> = ({ cardInfo }) => {
         ></Box>
         <Image src={cardInfo.img} />
       </Box>
-      <Box textAlign={{ base: "center", sm: "left" }} w={{ sm: "61%" }}>
+      <Box
+        textAlign={{ base: "center", sm: "left", md: "center" }}
+        w={{ sm: "61%", md: "100%" }}
+      >
         <Heading
           textTransform="uppercase"
           fontFamily="Jost"
@@ -55,7 +63,7 @@ export const DisplayCard: React.FC<DisplayCardProps> = ({ cardInfo }) => {
             </Box>
           </Link>
         ) : (
-          <Text>{cardInfo.text}</Text>
+          <Text lineHeight="1.5rem">{cardInfo.text}</Text>
         )}
       </Box>
     </Box>

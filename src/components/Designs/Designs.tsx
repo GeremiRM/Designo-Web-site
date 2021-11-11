@@ -14,7 +14,11 @@ export const Designs: React.FC<DesignsProps> = ({ info }) => {
   return (
     <Box fontFamily="Jost">
       <Wrapper>
-        <Grid mt="6rem" templateColumns="1fr" gap="3rem">
+        <Grid
+          mt="6rem"
+          templateColumns={{ base: "100%", md: "repeat(3, 1fr)" }}
+          gap="3rem"
+        >
           {renderDesignCards()}
         </Grid>
       </Wrapper>

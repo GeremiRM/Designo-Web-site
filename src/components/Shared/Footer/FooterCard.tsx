@@ -1,43 +1,45 @@
-import { Box, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Heading, Text, Button, Stack } from "@chakra-ui/react";
 import { ButtonComp } from "../../General/ButtonComp";
 
 export const FooterCard: React.FC<{}> = ({}) => {
   return (
-    <Box mb="-6rem">
+    <Box mb={{ base: "-6rem", md: "-4rem" }}>
       <Box
         w="100%"
-        textAlign="center"
+        textAlign={{ base: "center", md: "left" }}
         color="white"
         bg="#E7816B"
         mx="auto"
         borderRadius="15px"
         display="flex"
         alignItems="center"
-        justifyContent="center"
-        flexDir="column"
-        py={{ base: "4rem", sm: "3rem" }}
-        px={{ base: "1.5rem", sm: "8.75rem" }}
+        justifyContent={{ base: "center", md: "space-between" }}
+        flexDir={{ base: "column", md: "row" }}
+        py={{ base: "4rem", sm: "3rem", md: "4.75rem" }}
+        px={{ base: "1.5rem", sm: "8.75rem", md: "6rem" }}
         position="relative"
-        top="-260px"
+        top={{ base: "-260px", md: "-220px" }}
+        maxW={{ base: "330px", sm: "none" }}
       >
-        <Box>
+        <Stack
+          spacing="1.25rem"
+          mb={{ base: "2rem", md: "0" }}
+          w={{ md: "50%" }}
+        >
           <Heading
             fontFamily="Jost"
-            px="1.5rem"
-            mb="1.25rem"
+            px={{ base: "1.5rem", md: "0" }}
             fontWeight="600"
             fontSize={{ base: "2rem", sm: "2.5rem" }}
             lineHeight={{ sm: "2.5rem" }}
           >
             Let’s talk about your project
           </Heading>
-        </Box>
-        <Box mb="2.5rem">
-          <Text fontSize={{ base: "0.9rem", sm: "1rem" }}>
+          <Text lineHeight="1.75rem">
             Ready to take it to the next level? Contact us today and find out
             how our expertise can help your business grow.
           </Text>
-        </Box>
+        </Stack>
         <Box>
           <ButtonComp bg="white" color="black">
             Get in Touch

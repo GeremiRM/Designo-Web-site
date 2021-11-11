@@ -1,5 +1,4 @@
 import { Box, Heading, Grid, Image, Text, Flex } from "@chakra-ui/react";
-import React from "react";
 
 interface DesignCardProps {
   cardInfo: {
@@ -13,12 +12,12 @@ export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
   return (
     <Grid
       role="group"
-      textAlign="center"
       border="none"
-      borderRadius="8px"
+      borderRadius="20px"
+      overflow="hidden"
       bg="rgb(253, 243, 240)"
       transition="0.1s"
-      gridTemplateColumns={{ base: "", sm: "50% 50%" }}
+      gridTemplateColumns={{ base: "", sm: "50% 50%", md: "100%" }}
       _hover={{
         boxShadow: "0 0 20px rgba(0,0,0,0.25), 0 0 5px rgba(0,0,0,0.25)",
         transform: "scale(1.01)",
@@ -30,7 +29,6 @@ export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
       <Box borderRadius="inherit">
         <Image
           src={cardInfo.image}
-          borderRadius="inherit"
           transition="0.25s"
           // _groupHover={{
           //   transform: "scale(1.05)",
@@ -38,13 +36,7 @@ export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
           // }}
         />
       </Box>
-      <Flex
-        p="3rem 2rem"
-        bg="inherit"
-        borderRadius="inherit"
-        direction="column"
-        justify="center"
-      >
+      <Flex p="3rem 2rem" bg="inherit" direction="column" justify="center">
         <Heading
           textTrasform="uppercase"
           color="#E7816B"
@@ -60,7 +52,7 @@ export const DesignCard: React.FC<DesignCardProps> = ({ cardInfo }) => {
         >
           {cardInfo.heading}
         </Heading>
-        <Text fontSize={{ base: "0.9rem", sm: "1rem" }}>{cardInfo.desc}</Text>
+        <Text>{cardInfo.desc}</Text>
       </Flex>
     </Grid>
   );

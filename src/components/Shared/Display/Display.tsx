@@ -12,9 +12,10 @@ export const Display: React.FC<DisplayProps> = ({ info }) => {
 
   return (
     <Grid
-      templateColumns={{ base: "330px", sm: "100%" }}
+      templateColumns={{ base: "330px", sm: "100%", md: "repeat(3, 1fr)" }}
       justifyContent="center"
-      gap="5rem"
+      gap={{ base: "5rem", md: "2.5rem" }}
+      fontWeight="400"
       mt="8rem"
     >
       {renderDisplayCards()}

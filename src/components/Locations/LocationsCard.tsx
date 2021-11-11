@@ -29,17 +29,21 @@ export const LocationsCard: React.FC<LocationsCardProps> = ({ cardInfo }) => {
     <Flex
       id={id}
       borderRadius={{ base: "", sm: "20px" }}
-      direction={{ base: "column", sm: "column-reverse" }}
+      direction={{ base: "column", sm: "column-reverse", md: "row" }}
+      justify={{ md: "space-between" }}
       overflow="hidden"
+      _even={{ flexDirection: { md: "row-reverse" } }}
     >
       <Stack
         bg="rgb(253, 243, 240)"
         spacing="2rem"
-        py="4.5rem"
+        py={{ base: "4.5rem", md: "5.25rem" }}
         px="5rem"
         align={{ base: "center", sm: "flex-start" }}
         justify={{ base: "center", sm: "flex-start" }}
         textAlign={{ base: "center", sm: "left" }}
+        borderRadius="inherit"
+        w={{ md: "65%" }}
       >
         <Heading
           fontFamily="inherit"
@@ -62,7 +66,10 @@ export const LocationsCard: React.FC<LocationsCardProps> = ({ cardInfo }) => {
           base: `url(${cardInfo.img.base}) no-repeat left/cover`,
           md: `url(${cardInfo.img.md}) no-repeat left/cover`,
         }}
-        h="310px"
+        h={{ base: "310px", md: "auto" }}
+        mb={{ base: "", sm: "2rem", md: "0" }}
+        borderRadius="inherit"
+        w={{ md: "32%" }}
       ></Box>
     </Flex>
   );

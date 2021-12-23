@@ -6,7 +6,8 @@ interface HeroProps {}
 export const Hero: React.FC<HeroProps> = ({}) => {
   return (
     <Box
-      bg="rgb(237, 128, 105)"
+      bg="url(./home/desktop/bg-pattern-hero-home.svg) no-repeat -10px -10px"
+      bgColor="rgb(237, 128, 105)"
       color="white"
       py={{ base: "", md: "7rem" }}
       pt="5rem"
@@ -29,12 +30,16 @@ export const Hero: React.FC<HeroProps> = ({}) => {
           w={{ base: "", md: "55%" }}
         >
           <Box mb="1rem">
-            <Heading fontFamily="Jost" fontSize={{ base: "2rem", sm: "3rem" }}>
+            <Heading
+              fontFamily="Jost"
+              fontSize={{ base: "2rem", sm: "3rem" }}
+              fontWeight="500"
+            >
               Award-winning custom designs and digital branding solutions
             </Heading>
           </Box>
-          <Box mb={{ base: "1.25rem", sm: "2rem" }}>
-            <Text px={{ sm: "6rem", md: "0" }}>
+          <Box mb={{ base: "1.5rem", sm: "2rem" }}>
+            <Text px={{ sm: "6rem", md: "0" }} fontSize="1rem">
               With over 10 years in the industry, we are experienced in creating
               fully responsive websites, app design, and engaging brand
               experiences. Find out more about our services

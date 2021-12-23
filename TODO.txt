@@ -1,0 +1,12 @@
+1) Finish adding as many backgrounds as you can
+2) Add the animations
+3) Clean the insane amount of components and foldesr you have
+4) Eliminate any remaining unsused imports and styling
+5) Fix the locations links (and change the name as well)
+  the solution could simply be to add margin on tablet mode
+6) Change the name of the theme breakpoints to mobile, 
+  tablet and desktop
+7) Add the right spacing btween elements in each page
+8) Fix all the links
+9) Add hover effect to said links
+10) ???

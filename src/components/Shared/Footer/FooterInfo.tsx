@@ -1,4 +1,5 @@
 import { Box, Image, Flex, Text, Stack, HStack } from "@chakra-ui/react";
+import Link from "next/link";
 
 export const FooterInfo: React.FC<{}> = ({}) => {
   return (
@@ -32,9 +33,30 @@ export const FooterInfo: React.FC<{}> = ({}) => {
           letterSpacing="2px"
           direction={{ base: "column", sm: "row" }}
         >
-          <Text>Our Company</Text>
-          <Text>Locations</Text>
-          <Text>Contact</Text>
+          <Link href="/about">
+            <Text
+              transition="0.25s all ease"
+              _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+            >
+              Our Company
+            </Text>
+          </Link>
+          <Link href="/locations">
+            <Text
+              transition="0.25s all ease"
+              _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+            >
+              Locations
+            </Text>
+          </Link>
+          <Link href="/contact">
+            <Text
+              transition="0.25s all ease"
+              _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+            >
+              Contact
+            </Text>
+          </Link>
         </Stack>
       </Flex>
       <Flex
@@ -59,13 +81,28 @@ export const FooterInfo: React.FC<{}> = ({}) => {
           justify="center"
           mt={{ base: "2.5rem", sm: "0" }}
           spacing="1rem"
-          alignSelf="flex-end"
+          alignSelf={{ md: "flex-end" }}
         >
-          <Image src="./shared/desktop/icon-facebook.svg" />
-          <Image src="./shared/desktop/icon-youtube.svg" />
-          <Image src="./shared/desktop/icon-twitter.svg" />
-          <Image src="./shared/desktop/icon-pinterest.svg" />
-          <Image src="./shared/desktop/icon-instagram.svg" />
+          <Image
+            src="./shared/desktop/icon-facebook.svg"
+            _hover={{ cursor: "pointer" }}
+          />
+          <Image
+            src="./shared/desktop/icon-youtube.svg"
+            _hover={{ cursor: "pointer" }}
+          />
+          <Image
+            src="./shared/desktop/icon-twitter.svg"
+            _hover={{ cursor: "pointer" }}
+          />
+          <Image
+            src="./shared/desktop/icon-pinterest.svg"
+            _hover={{ cursor: "pointer" }}
+          />
+          <Image
+            src="./shared/desktop/icon-instagram.svg"
+            _hover={{ cursor: "pointer" }}
+          />
         </HStack>
       </Flex>
     </Box>

@@ -30,9 +30,12 @@ export const About: React.FC<{}> = ({}) => {
               ></Box>
               <Flex
                 color="white"
-                bg="rgb(237, 128, 105)"
+                bg={{
+                  base: "url(./about/mobile/bg-hero.svg)",
+                }}
+                bgColor="rgb(231, 129, 107)"
                 p={{ base: "4.75rem", sm: "3.5rem 3.5rem 4rem", md: "0 6rem" }}
-                borderBottomLeftRadius="inherit"
+                borderBottomLeftRadius={{ sm: "inherit" }}
                 borderBottomRightRadius={{ sm: "inherit", md: "none" }}
                 w={{ base: "100%", md: "55%" }}
                 direction={{ base: "column" }}

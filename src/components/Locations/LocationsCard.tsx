@@ -17,8 +17,8 @@ export const LocationsCard: React.FC<LocationsCardProps> = ({ cardInfo }) => {
     ));
   };
 
-  const renderText = (desc) => {
-    return desc.map((text, idx) => (
+  const renderText = (desc: string[]) => {
+    return desc.map((text: string, idx: number) => (
       <Text fontWeight={idx === 0 ? "600" : "500"}>{text}</Text>
     ));
   };

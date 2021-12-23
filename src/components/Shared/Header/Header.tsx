@@ -9,6 +9,7 @@ import {
   UnorderedList,
   ListItem,
   Fade,
+  Text,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { Wrapper } from "../../General/Wrapper";
@@ -71,13 +72,43 @@ export const Header: React.FC<{}> = ({}) => {
                     letterSpacing="1.5px"
                   >
                     <ListItem>
-                      <Link href="/about">Our Company</Link>
+                      <Link href="/about">
+                        <Text
+                          transition="0.25s all ease"
+                          _hover={{
+                            cursor: "pointer",
+                            color: "rgb(237, 128, 105)",
+                          }}
+                        >
+                          Our Company
+                        </Text>
+                      </Link>
                     </ListItem>
                     <ListItem>
-                      <Link href="/locations">Locations</Link>
+                      <Link href="/locations">
+                        <Text
+                          transition="0.25s all ease"
+                          _hover={{
+                            cursor: "pointer",
+                            color: "rgb(237, 128, 105)",
+                          }}
+                        >
+                          Locations
+                        </Text>
+                      </Link>
                     </ListItem>
                     <ListItem>
-                      <Link href="/contact">Contact</Link>
+                      <Link href="/contact">
+                        <Text
+                          transition="0.25s all ease"
+                          _hover={{
+                            cursor: "pointer",
+                            color: "rgb(237, 128, 105)",
+                          }}
+                        >
+                          Contact
+                        </Text>
+                      </Link>
                     </ListItem>
                   </UnorderedList>
                 </Box>
@@ -90,9 +121,33 @@ export const Header: React.FC<{}> = ({}) => {
             fontSize="0.9rem"
             letterSpacing="2px"
           >
-            <Link href="/about">Our Company</Link>
-            <Link href="/locations">Locations</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/about">
+              <Text
+                display="inline"
+                transition="0.25s all ease"
+                _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+              >
+                Our Company
+              </Text>
+            </Link>
+            <Link href="/locations">
+              <Text
+                display="inline"
+                transition="0.25s all ease"
+                _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+              >
+                Locations
+              </Text>
+            </Link>
+            <Link href="/contact">
+              <Text
+                display="inline"
+                transition="0.25s all ease"
+                _hover={{ cursor: "pointer", color: "rgb(237, 128, 105)" }}
+              >
+                Contact
+              </Text>
+            </Link>
           </HStack>
         </Flex>
       </Wrapper>

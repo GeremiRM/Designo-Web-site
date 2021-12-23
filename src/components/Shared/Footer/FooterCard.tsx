@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Box, Heading, Text, Button, Stack } from "@chakra-ui/react";
 import { ButtonComp } from "../../General/ButtonComp";
 
@@ -8,7 +10,7 @@ export const FooterCard: React.FC<{}> = ({}) => {
         w="100%"
         textAlign={{ base: "center", md: "left" }}
         color="white"
-        bg="#E7816B"
+        bgColor="#E7816B"
         mx="auto"
         borderRadius="15px"
         display="flex"
@@ -42,7 +44,7 @@ export const FooterCard: React.FC<{}> = ({}) => {
         </Stack>
         <Box>
           <ButtonComp bg="white" color="black">
-            Get in Touch
+            <Link href="/contact">Get in Touch</Link>
           </ButtonComp>
         </Box>
       </Box>
